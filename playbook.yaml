@@ -13,8 +13,8 @@
           - curl
           - wget
     - name: check massa
-      command: cd /root/massa/massa-client/ && /root/massa/massa-client/massa-client --pwd 111222333 && cd
-      
+      command: "cd /root/massa/massa-client/ && /root/massa/massa-client/massa-client --pwd 111222333 && cd"
+
     - name: Display the config
       debug:
         msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
