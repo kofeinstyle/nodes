@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: gear
   tasks:
     - name: Creating an empty file
       file:
