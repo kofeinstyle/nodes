@@ -1,12 +1,20 @@
 ---
 - hosts: gear
   tasks:
-    - name: Creating an empty file
-      file:
-        path: "/root/ansible.txt"
-        state: touch
+#    - name: Creating an empty file
+#      file:
+#        path: "/root/ansible.txt"
+#        state: touch
     - name: install packages
       apt:
         state: present
         name:
-          - htop    
+          - htop
+          - curl
+          - wget
+    - name: check massa
+      command: clientw
+      
+    - name: Display the config
+      debug:
+        msg: "The hostname is {{ ansible_net_hostname }} and the OS is {{ ansible_net_version }}"
