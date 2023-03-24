@@ -1,7 +1,12 @@
 ---
 - hosts: all
   tasks:
-  - name: Creating an empty file
-    file:
-      path: "/root/ansible.txt"
-      state: touch
+    - name: Creating an empty file
+      file:
+        path: "/root/ansible.txt"
+        state: touch
+    - name: install packages
+      apt:
+        state: present
+        name:
+          - htop    
