@@ -7,6 +7,8 @@ sleep 3s
 while true
 do
         balance=$(./massa-client --pwd $massa_pass wallet_info | grep "Rolls" | awk '{ print $3 }' | sed 's/final=//;s/,//')
+        sleep 3s
+        echo Ballance: ${balance}
         int_balance=${balance%%.*}
         echo Current rolls balance : ${int_balance}
         if [ $int_balance -lt 1 ]; then
