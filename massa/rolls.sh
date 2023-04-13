@@ -3,7 +3,7 @@
 
 cd $HOME/massa/massa-client
 massa_wallet_address=$(./massa-client --pwd $massa_pass wallet_info | grep Address | awk '{ print $2 }')
-sleep 3s
+echo Wallet address: ${massa_wallet_address}
 while true
 do
         balance=$(./massa-client --pwd $massa_pass wallet_info | grep "Rolls" | awk '{ print $3 }' | sed 's/final=//;s/,//')
