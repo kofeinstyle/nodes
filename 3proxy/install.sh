@@ -32,7 +32,7 @@ rotate 30
 auth strong
 
 allow * * * 80-88,8080-8088 HTTP
-allow * * * 443,8443,8080 HTTPS
+allow * * * 443,8443,8180 HTTPS
 
 proxy -p53129 -n -a
 users user:CL:P@ssv0rd
